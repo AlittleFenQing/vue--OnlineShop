@@ -5,7 +5,12 @@ import Layout from './components/Layout'
 import VueRouter from 'vue-router'
 import VueResource from 'vue-resource'
 import IndexPage from './pages/index'
-import slideShow from './components/slideShow'
+import DetailPage from './pages/detail'
+import DetailAnaPage from './pages/detail/analysis'
+import DetailCouPage from './pages/detail/count'
+import DetailForPage from './pages/detail/forecast'
+import DetailPubPage from './pages/detail/publish'
+//import slideShow from './components/slideShow'
 Vue.use(VueRouter)
 Vue.use(VueResource)
 let router =new VueRouter({
@@ -14,7 +19,27 @@ let router =new VueRouter({
     {
       path:'/',
       component:IndexPage
-    }
+    },{
+      path:'/detail',
+      component:DetailPage,
+      children:[
+       {
+        path:'analysis',
+        component:DetailAnaPage
+      },
+      {
+        path:'count',
+        component:DetailCouPage
+      }, {
+        path:'forecast',
+        component:DetailForPage
+      },
+      {
+        path:'publish',
+        component:DetailPubPage
+      }
+    ]        
+  } 
   ]
 })
 Vue.config.productionTip = false
