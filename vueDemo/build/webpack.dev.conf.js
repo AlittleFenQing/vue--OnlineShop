@@ -16,6 +16,9 @@ const app = express()
 var appData = require('../db.json')//加载本地数据文件
 var getNewsList = appData.getNewsList//获取对应的本地数据
 var login = appData.login//获取对应的本地数据
+var getPrice = appData.getPrice//获取对应的本地数据
+var createOrder = appData.createOrder//获取对应的本地数据
+var getOrderList = appData.getOrderList//获取对应的本地数据
 var apiRoutes = express.Router()
 app.use('/api', apiRoutes)
 
@@ -67,6 +70,24 @@ const devWebpackConfig = merge(baseWebpackConfig, {
         res.json({
           errno: 0,
           data: login
+        })
+      }),
+      app.get('/api/getPrice', (req, res) => {
+        res.json({
+          errno: 0,
+          data: getPrice
+        })
+      }),
+      app.get('/api/createOrder', (req, res) => {
+        res.json({
+          errno: 0,
+          data: createOrder
+        })
+      }),
+      app.get('/api/getOrderList', (req, res) => {
+        res.json({
+          errno: 0,
+          data: getOrderList
         })
       })
     } 

@@ -2,7 +2,7 @@
   <div class="detail-wrap">
     <div class="detail-left">
       <div class="product-board">
-        <img src="../assets/images/1.png">
+        <img :src="productIcon">
         <ul>
           <router-link v-for="(item,index) in products" :key="index" :to="{ path: item.path }" tag="li" active-class="active">
             {{ item.name }}
@@ -25,11 +25,13 @@ export default {
     DetailPage
   },
   data () {
+    //this.$router.path
     return {
       products: [
         {
           name: '数据统计',
           path: 'count',
+          icon:require('../assets/images/1.png'),
           active: false
         },
         {
