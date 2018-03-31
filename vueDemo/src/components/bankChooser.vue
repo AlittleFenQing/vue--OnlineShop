@@ -82,7 +82,7 @@ export default {
     display: inline-block;
     width: 117px;
     height: 32px;
-    /* background-image: url(../assets/banks/banks.png); */
+    background-image: url(../assets/banks/banks.png);
     background-repeat: no-repeat;
     margin: 5px;
     border: 1px solid #e3e3e3;

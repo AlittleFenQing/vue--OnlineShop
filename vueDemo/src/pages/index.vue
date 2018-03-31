@@ -44,6 +44,7 @@
 <script>
 import IndexPage from "../pages/index";
 import slideShow from "../components/slideShow";
+
 export default {
   components: {
     IndexPage,slideShow

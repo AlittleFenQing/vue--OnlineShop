@@ -19,6 +19,7 @@ var login = appData.login//获取对应的本地数据
 var getPrice = appData.getPrice//获取对应的本地数据
 var createOrder = appData.createOrder//获取对应的本地数据
 var getOrderList = appData.getOrderList//获取对应的本地数据
+var checkOrder = appData.checkOrder//获取对应的本地数据
 var apiRoutes = express.Router()
 app.use('/api', apiRoutes)
 
@@ -88,6 +89,12 @@ const devWebpackConfig = merge(baseWebpackConfig, {
         res.json({
           errno: 0,
           data: getOrderList
+        })
+      }),
+      app.get('/api/checkOrder', (req, res) => {
+        res.json({
+          errno: 0,
+          data: checkOrder
         })
       })
     } 

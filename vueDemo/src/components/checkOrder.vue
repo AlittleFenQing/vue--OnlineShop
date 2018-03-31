@@ -41,7 +41,7 @@ export default {
   },
   methods: {
     checkStatus () {
-      this.$http.post('/api/checkOrder', {
+      this.$http.get('/api/checkOrder', {
         orderId: this.orderId
       })
       .then((res) => {

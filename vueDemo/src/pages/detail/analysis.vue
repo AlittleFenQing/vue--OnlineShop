@@ -114,9 +114,22 @@
 
 <script>
 import VSelection from '../../components/base/selection'
+import VCounter from '../../components/base/counter'
+import VChooser from '../../components/base/chooser'
+import VMulChooser from '../../components/base/multiplyChooser'
+import Dialog from '../../components/base/dialog'
+import BankChooser from '../../components/bankChooser'
+import CheckOrder from '../../components/checkOrder'
+import _ from 'lodash'
 export default {
   components: {
-    VSelection
+     VSelection,
+    VCounter,
+    VChooser,
+    VMulChooser,
+    MyDialog: Dialog,
+    BankChooser,
+    CheckOrder
   },
   data () {
     return {
@@ -189,9 +202,9 @@ export default {
         period: this.period.value,
         version: buyVersionsArray.join(',')
       }
-      this.$http.post('/api/getPrice', reqParams)
+      this.$http.get('/api/getPrice', reqParams)
       .then((res) => {
-        this.price = res.data.amount
+        this.price = res.body.data.amount
       })
     },
     showPayDialog () {
@@ -220,9 +233,9 @@ export default {
         version: buyVersionsArray.join(','),
         bankId: this.bankId
       }
-      this.$http.post('/api/createOrder', reqParams)
+      this.$http.get('/api/createOrder', reqParams)
       .then((res) => {
-        this.orderId = res.data.orderId
+        this.orderId = res.body.data.orderId
         this.isShowCheckOrder = true
         this.isShowPayDialog = false
       }, (err) => {
