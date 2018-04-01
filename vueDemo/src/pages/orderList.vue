@@ -37,10 +37,11 @@
 
 <script>
 import VSelection from '../components/base/selection'
+import VDatePicker from '../components/base/datepicker'//vue时间组件
 import _ from 'lodash'
 export default {
   components: {
-    VSelection
+    VSelection,VDatePicker
   },
   data () {
     return {
