@@ -144,8 +144,8 @@ export default {
       }
       else if (this.currentOrder === 'desc') {
         this.currentOrder = 'asc'
-      }
-      this.tableData = _.orderBy(this.tableData, headItem.key, this.currentOrder)
+      }//切换序列的代码
+      this.tableData = _.orderBy(this.tableData, headItem.key, this.currentOrder)//第一个参数是要排序的数组，第二个参数是根据某一个标准进行排序，排序的方式，正序倒序
     }
   },
   mounted () {
