@@ -70,6 +70,9 @@ export default {
     logClick () {
       this.isShowLogDialog = true
     },
+    quit ( ) {
+      this.username =''
+    },
     regClick () {
       this.isShowRegDialog = true
     },
