@@ -13,22 +13,22 @@
     {<br/>
       "id": 1,<br/>
       "title": "新闻条目1新闻条目1新闻条目1新闻条目1",<br/>
-      "url": "http://starcraft.com"<br/>
+      "url": "starcraft.com"<br/>
     },<br/>
     {<br/>
       "id": 2,<br/>
       "title": "新闻条目2新闻条目2新闻条目2新闻条目2",<br/>
-      "url": "http://warcraft.com"<br/>
+      "url": "warcraft.com"<br/>
     },<br/>
     {<br/>
       "id": 3,<br/>
       "title": "新闻条3新闻条3新闻条3",<br/>
-      "url": "http://overwatch.com"<br/>
+      "url": "overwatch.com"<br/>
     },<br/>
     {<br/>
       "id": 4,<br/>
       "title": "新闻条4广告发布",<br/>
-      "url": "http://hearstone.com"<br/>
+      "url": "hearstone.com"<br/>
     }<br/>
   ],<br/> 
 #### 商品详情页：
