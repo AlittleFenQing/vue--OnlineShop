@@ -71,31 +71,65 @@
       }<br/>
     ]<br/>
   }<br/> 
-#### 结算清单页：
+#### 结算清单弹窗：
 ##### 布局：<br> 
 * 上下布局：
-  * 上：包含综合评分、服务态度、商品评分、商家收藏等星级评价。<br/>
-  * 下：公告活动、商家实景、商家信息。<br/>
+  * 上：购买商品型号、价格、有效时间。<br/>
+  * 下：支付方式选择（多种银行支付）。<br/>
 ##### 数据：<br>
 * 请求方式：GET<br>
-* 请求地址：http://ustbhuangyi.com/sell/api/ratings<br/>
+* 请求地址：/api/getOrderList<br/>
 * 数据参数：<br/>
-    `'{`'<br/>
-      `'"username": "3******c",`'<br/>
-     `' "rateTime": 1469281964000,`'<br/>
-     `' "foods": [`'<br/>
-        `'{`'<br/>
-          `'"rateType": " 0",`'<br/>
-         `' "price": 10,`'<br/>
-          `'"oldPrice": "",`'<br/>
-          `'"text": "",`'<br/>
-          `'"sellCount": 229,`'<br/>
-          `'"rating": 100,<br>`'<br/>
-      `'}`'<br/> 
-    `']`'<br/> 
- `'}`'<br/> 
+      products: [<br/>
+        {<br/>
+          label: '数据统计',<br/>
+          value: 0<br/>
+        },<br/>
+        {<br/>
+          label: '数据预测',<br/>
+          value: 1<br/>
+        },<br/>
+        {<br/>
+          label: '流量分析',<br/>
+          value: 2<br/>
+        },<br/>
+        {<br/>
+          label: '广告发布',<br/>
+          value: 3<br/>
+        }<br/>
+      ],<br/>
+      tableHeads: [<br/>
+        {<br/>
+          label: '订单号',<br/>
+          key: 'orderId'<br/>
+        },<br/>
+        {<br/>
+          label: '购买产品',<br/>
+          key: 'product'<br/>
+        },<br/>
+        {<br/>
+          label: '版本类型',<br/>
+          key: 'version'<br/>
+        },<br/>
+        {<br/>
+          label: '有效时间',<br/>
+          key: 'period'<br/>
+        },<br/>
+        {<br/>
+          label: '购买日期',<br/>
+          key: 'date'<br/>
+        },<br/>
+        {<br/>
+          label: '数量',<br/>
+          key: 'buyNum'<br/>
+        },<br/>
+        {<br/>
+          label: '总价',<br/>
+          key: 'amount'<br/>
+        }<br/>
+      ]<br/> 
 
 ## 运行方法：<br/> 
 * npm instaill<br/> 
-* cd sell<br/>  
+* cd vueDemo<br/>  
 * npm run dev
