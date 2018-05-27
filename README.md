@@ -4,25 +4,33 @@
 ###  项目组成：
 #### 商品页：<br/> 
 ##### 布局：<br> 
-* flex左右布局，左侧为商品菜单，右侧是商品展示，基于一个tab选项卡结构。
+* flex左右布局，左侧为商品类别，右侧是轮播图和商品购买。
 ##### 数据：<br>
 * 请求方式：GET<br>
-* 请求地址：http://ustbhuangyi.com/sell/api/goods<br/>
+* 请求地址：'/api/getNewsList'<br/>
 * 数据参数：<br/>
-    `'{`'<br/>
-      `'"name": "热销榜",`'<br/>
-     `' "type": -1,`'<br/>
-     `' "foods": [`'<br/>
-        `'{`'<br/>
-          `'"name": "皮蛋瘦肉粥",`'<br/>
-         `' "price": 10,`'<br/>
-          `'"oldPrice": "",`'<br/>
-          `'"description": "咸粥",`'<br/>
-          `'"sellCount": 229,`'<br/>
-          `'"rating": 100,<br>`'<br/>
-      `'}`'<br/> 
-    `']`'<br/> 
- `'}`'<br/> 
+"getNewsList": [
+    {
+      "id": 1,
+      "title": "新闻条目1新闻条目1新闻条目1新闻条目1",
+      "url": "http://starcraft.com"
+    },
+    {
+      "id": 2,
+      "title": "新闻条目2新闻条目2新闻条目2新闻条目2",
+      "url": "http://warcraft.com"
+    },
+    {
+      "id": 3,
+      "title": "新闻条3新闻条3新闻条3",
+      "url": "http://overwatch.com"
+    },
+    {
+      "id": 4,
+      "title": "新闻条4广告发布",
+      "url": "http://hearstone.com"
+    }
+  ],<br/> 
 #### 商品详情页：
 ##### 布局：<br> 
 * 上下布局：
